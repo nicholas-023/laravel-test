@@ -1,0 +1,82 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+@import url('https://unpkg.com/aos@next/dist/aos.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+@layer components {
+    .main-header::before {
+        content: '';
+        position: absolute;
+        width: 10%;
+        border: 2px solid red;
+        bottom: -.8rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .featured-card {
+        position: relative;
+        height: 30rem;
+        width: 22rem;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .featured-card:hover div {
+        display: block;
+    }
+
+    .featured-card div:hover .featured-card {
+        transform: scale(125);
+    }
+
+    .featured-card img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .featured-card > div {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .product-card {
+        width: 25rem;
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 10px;
+    }
+
+    .product-card img {
+        width: 100%;
+        height: 15rem;
+    }
+
+    .bg-section {
+        background-image: linear-gradient(#0000007f, #0000007f), url('../../public/images/background/section.jpg');
+    }
+
+    .bg-login {
+        background-image: linear-gradient(#0000007f, #0000007f), url('../../public/images/background/bg-login.jpg');
+    }
+
+    .bg-register {
+        background-image: linear-gradient(#0000007f, #0000007f), url('../../public/images/background/bg-register.jpg');
+    }
+
+    .bg-login-b {
+        background-image: linear-gradient(90deg, #3b60f6, #991fe0);
+    }
+}
